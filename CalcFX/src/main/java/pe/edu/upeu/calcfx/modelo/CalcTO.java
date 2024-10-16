@@ -1,21 +1,15 @@
+
 package pe.edu.upeu.calcfx.modelo;
 
 
 public class CalcTO {
+    int id;
     String num1;
     String num2;
-    String resultado;
     char operador;
+    String resultado;
 
-    @Override
-    public String toString() {
-        return "CalcTO{" +
-                "num1='" + num1 + '\'' +
-                ", num2='" + num2 + '\'' +
-                ", resultado='" + resultado + '\'' +
-                ", operador=" + operador +
-                '}';
-    }
+
 
     public String getNum1() {
         return num1;
@@ -33,6 +27,14 @@ public class CalcTO {
         this.num2 = num2;
     }
 
+    public char getOperador() {
+        return operador;
+    }
+
+    public void setOperador(char operador) {
+        this.operador = operador;
+    }
+
     public String getResultado() {
         return resultado;
     }
@@ -41,11 +43,17 @@ public class CalcTO {
         this.resultado = resultado;
     }
 
-    public char getOperador() {
-        return operador;
-    }
+    public int getId() {return id;}
 
-    public void setOperador(char operador) {
-        this.operador = operador;
+    public void setId(int id) {this.id = id;}
+
+    @Override
+    public String toString() {
+        return "CalcTO{" +
+                "num1='" + num1 + '\'' +
+                ", num2='" + num2 + '\'' +
+                ", operador=" + operador +
+                ", resultado='" + resultado + '\'' +
+                '}';
     }
 }
