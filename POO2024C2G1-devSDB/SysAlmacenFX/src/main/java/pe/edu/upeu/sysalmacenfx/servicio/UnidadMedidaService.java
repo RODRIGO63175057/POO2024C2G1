@@ -42,7 +42,7 @@ public class UnidadMedidaService {
         repo.deleteById(id);
     }
     public UnidadMedida searchById(Long id){
-        return repo.findById(id).get();
+        return repo.findById(id).orElse(null);
     }
 
 
