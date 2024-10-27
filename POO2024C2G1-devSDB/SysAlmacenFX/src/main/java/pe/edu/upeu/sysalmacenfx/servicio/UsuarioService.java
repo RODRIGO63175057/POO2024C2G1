@@ -42,4 +42,8 @@ public class UsuarioService {
     public Usuario searchById(Long id) {
         return repo.findById(id).orElse(null);
     }
+    public Usuario loginUsuario(String user, String clave) {
+        return repo.loginUsuario(user, clave);
+    }
+
 }

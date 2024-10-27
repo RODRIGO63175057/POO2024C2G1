@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="miContenedor" style="-fx-background-color: #4567;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.sysalmacenfx.control.ProductoController">
+<AnchorPane fx:id="miContenedor" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #4567;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.sysalmacenfx.control.ProdAutoCompControl">
    <children>
       <VBox layoutX="14.0" layoutY="14.0" prefHeight="524.0">
          <children>
@@ -115,11 +115,11 @@
                                  <GridPane.margin>
                                     <Insets left="5.0" />
                                  </GridPane.margin></Label>
-                              <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Guardar" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                              <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#validarFormulario" text="Guardar" GridPane.columnIndex="1" GridPane.rowIndex="8">
                                  <GridPane.margin>
                                     <Insets left="5.0" right="5.0" />
                                  </GridPane.margin></Button>
-                              <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Cancelar" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                              <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#cancelarAccion" text="Cancelar" GridPane.columnIndex="2" GridPane.rowIndex="8" />
                               <ComboBox fx:id="cbxMarca" prefHeight="26.0" prefWidth="294.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="5">
                                  <GridPane.margin>
                                     <Insets left="5.0" right="5.0" />
