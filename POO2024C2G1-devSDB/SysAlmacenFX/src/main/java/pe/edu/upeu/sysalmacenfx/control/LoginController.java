@@ -26,10 +26,13 @@ import java.io.IOException;
 
 @Component
 public class LoginController {
+
     @Autowired
-    private ApplicationContext  context;
+    UsuarioService us;
+
     @Autowired
-    UsuarioService us ;
+    private ApplicationContext context;
+
     @FXML
     TextField txtUsuario;
     @FXML
@@ -37,16 +40,18 @@ public class LoginController {
     @FXML
     Button btnIngresar;
 
+
+
     @FXML
     public void login(ActionEvent event) throws IOException {
         try {
             Usuario usu=us.loginUsuario(txtUsuario.getText(),
                     new String(txtClave.getText()));
             if (usu!=null) {
+
                 SessionManager.getInstance().setUserId(usu.getIdUsuario());
                 SessionManager.getInstance().setUserName(usu.getUser());
                 SessionManager.getInstance().setNombrePerfil(usu.getIdPerfil().getNombre());
-
 
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/guimainfx.fxml"));
                 loader.setControllerFactory(context::getBean);
@@ -55,14 +60,14 @@ public class LoginController {
                 Rectangle2D bounds = screen.getBounds();
                 Scene mainScene = new Scene(mainRoot,bounds.getWidth(), bounds.getHeight()-30);
                 mainScene.getStylesheets().add(getClass().getResource("/css/styles.css").toExternalForm());
-                Stage stage = (Stage) ((Node ) event.getSource()).getScene().getWindow();
-                stage.getIcons().add(new Image(getClass().getResource("/img/store.png").toExternalForm()) );
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                stage.getIcons().add(new Image(getClass().getResource("/img/store.png").toExternalForm()));
                 stage.setScene(mainScene);
                 stage.setTitle("Pantalla Principal");
                 stage.setX(bounds.getMinX());
                 stage.setY(bounds.getMinY());
                 stage.setResizable(true);
-                StageManager .setPrimaryStage(stage);
+                StageManager.setPrimaryStage(stage);
                 stage.setWidth(bounds.getWidth());
                 stage.setHeight(bounds.getHeight());
                 stage.show();
@@ -75,8 +80,9 @@ public class LoginController {
             }
         }catch (Exception e){
             System.out.println(e.getMessage());
-        }
-    }
+        } }
+
+
 
 
 }

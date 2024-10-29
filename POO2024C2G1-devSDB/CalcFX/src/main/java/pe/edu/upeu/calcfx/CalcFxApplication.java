@@ -1,4 +1,3 @@
-
 package pe.edu.upeu.calcfx;
 
 import atlantafx.base.theme.PrimerLight;
@@ -18,8 +17,8 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class CalcFxApplication extends Application {
-	ConfigurableApplicationContext configurableApplicationContext;
-	Parent parent;
+		ConfigurableApplicationContext configurableApplicationContext;
+		Parent parent;
 	public static void main(String[] args) {
 		System.out.println("Hola estas funcionando");
 		launch(args);
@@ -45,12 +44,12 @@ public class CalcFxApplication extends Application {
 	public void start(Stage stage) throws Exception {
 		Screen screen = Screen.getPrimary();
 		Rectangle2D bounds = screen.getBounds();
-		//Scene scene = new Scene(parent,bounds.getWidth()/2, bounds.getHeight()/2);
+	//Scene scene = new Scene(parent,bounds.getWidth()/2, bounds.getHeight()/2);
 		Scene scene = new Scene(parent);
-		// Obtener el tamaño preferido del contenido
+	// Obtener el tamaño preferido del contenido
 		double preferredWidth = parent.prefWidth(-1); // -1 significa que no se restringe el cálculo
 		double preferredHeight = parent.prefHeight(-1);
-		// Configurar el tamaño mínimo basado en el tamaño preferido
+	// Configurar el tamaño mínimo basado en el tamaño preferido
 		stage.setMinWidth(preferredWidth);
 		stage.setMinHeight(preferredHeight);
 

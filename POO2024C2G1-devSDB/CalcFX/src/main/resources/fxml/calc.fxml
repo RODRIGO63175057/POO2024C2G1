@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
@@ -15,18 +14,18 @@
                      <children>
                         <TextField fx:id="txtResultado" />
                         <GridPane maxHeight="1.7976931348623157E308" prefHeight="300.0">
-                           <columnConstraints>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
+                          </rowConstraints>
                            <children>
                               <Button fx:id="btn7" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionButton" text="7">
                                  <font>
@@ -101,13 +100,13 @@
             <AnchorPane prefHeight="200.0">
                <children>
                   <TableView fx:id="tableView" layoutX="14.0" layoutY="14.0" prefHeight="200.0">
-                     <columns>
-                        <TableColumn fx:id="cVal1" prefWidth="75.0" text="Val1" />
-                        <TableColumn fx:id="cVal2" prefWidth="75.0" text="Val2" />
+                    <columns>
+                      <TableColumn fx:id="cVal1" prefWidth="75.0" text="Val1" />
+                      <TableColumn fx:id="cVal2" prefWidth="75.0" text="Val2" />
                         <TableColumn fx:id="cOper" prefWidth="75.0" text="Operador" />
                         <TableColumn fx:id="cResult" prefWidth="75.0" text="Resultado" />
                         <TableColumn fx:id="cOpc" minWidth="20.0" prefWidth="75.0" text="Opciones" />
-                     </columns>
+                    </columns>
                   </TableView>
                   <Button layoutX="28.0" onAction="#iniciar" layoutY="258.0" mnemonicParsing="false" text="Iniciar" />
                   <Button layoutX="114.0" onAction="#anular" layoutY="258.0" mnemonicParsing="false" text="Anular" />

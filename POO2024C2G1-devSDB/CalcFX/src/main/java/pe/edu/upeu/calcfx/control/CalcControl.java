@@ -1,4 +1,3 @@
-
 package pe.edu.upeu.calcfx.control;
 
 
@@ -50,11 +49,9 @@ public class CalcControl {
 
     @FXML
     public void initialize() {
-        listaOper();
         anular();
     }
-
-    int t=0;
+ int t=0;
 
     @FXML
     public void accionButton(ActionEvent event){
@@ -109,31 +106,29 @@ public class CalcControl {
         }
 
         CalcTO to=new CalcTO();
+        to.setId(Long.parseLong(String.valueOf(indexEdit)));
         to.setNum1(String.valueOf(val1));
         to.setNum2(String.valueOf(val2));
         to.setOperador(valores[1].charAt(0));
-        to.setId(indexEdit);
-
         to.setResultado(String.valueOf(txtResultado.getText()));
         if(indexEdit!=-1){
             serviceI.actualizarResultados(to, to.getId());
         }else{
-            System.out.println("VV:"+txtResultado.getText());
             serviceI.guardarResultados(to);
         }
         indexEdit=-1;
         listaOper();
     }
 
-    private void editOperCalc(CalcTO cal, int index) {
+    private void editOperCalc(CalcTO cal, Long index) {
         System.out.println("Editing: " + cal.getNum1() + " Index:"+index);
         txtResultado.setText(cal.getNum1()+" "+cal.getOperador()+" "+cal.getNum2());
-        indexEdit=index;
+        indexEdit=index.intValue();
     }
 
-    private void deleteOperCalc(CalcTO cal, int index) {
+    private void deleteOperCalc(CalcTO cal, Long index) {
         System.out.println("Deleting: " + cal.getNum2());
-        serviceI.eliminarResultados(cal.getId());
+        serviceI.eliminarResultados(index);
         listaOper();
         //tableView.getItems().remove(cal);  // Elimina la operación del TableView
     }
@@ -184,7 +179,7 @@ public class CalcControl {
 
         // Vincular columnas con propiedades de CalcTO
         cVal1.setCellValueFactory(new PropertyValueFactory<CalcTO,
-                String>("num1"));
+                        String>("num1"));
 
         cVal1.setCellFactory(TextFieldTableCell.<CalcTO>forTableColumn());
 

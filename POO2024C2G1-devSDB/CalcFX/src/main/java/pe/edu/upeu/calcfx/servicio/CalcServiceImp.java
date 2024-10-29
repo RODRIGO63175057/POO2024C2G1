@@ -1,10 +1,9 @@
-
 package pe.edu.upeu.calcfx.servicio;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pe.edu.upeu.calcfx.dao.CalculadoraDao;
 import pe.edu.upeu.calcfx.modelo.CalcTO;
+import pe.edu.upeu.calcfx.repositorio.CalculadoraRepository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,27 +12,28 @@ import java.util.List;
 public class CalcServiceImp implements CalcServiceI{
 
     @Autowired
-    CalculadoraDao dbOper;
+    CalculadoraRepository repository;
 
     //List<CalcTO> dbOper= new ArrayList<>();
 
     @Override
     public void guardarResultados(CalcTO to) {
-        dbOper.insertar(to);
+        repository.save(to);
     }
 
     @Override
     public List<CalcTO> obtenerResultados() {
-        return dbOper.listar();
+        return repository.findAll();
     }
 
     @Override
-    public void actualizarResultados(CalcTO to, int index) {
-        dbOper.actualizar(to, index);
+    public void actualizarResultados(CalcTO to, Long index) {
+        to.setId(index);
+        repository.save(to);
     }
 
     @Override
-    public void eliminarResultados(int index) {
-        dbOper.eliminar(index);
+    public void eliminarResultados(Long index) {
+        repository.deleteById(index);
     }
 }
