@@ -151,7 +151,7 @@ public class GUIMainFX {
 
                 tabPaneFx.getTabs().clear();
                 try{
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/login.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/vsssiew/login.fxml"));
                     fxmlLoader.setControllerFactory(context::getBean);
                     parent= fxmlLoader.load();
 
