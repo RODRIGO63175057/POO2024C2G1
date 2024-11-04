@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<GridPane fx:controller="pe.edu.upeu.ventafx.control.RegistroController"
+          xmlns:fx="http://javafx.com/fxml"
+          alignment="center" hgap="10" vgap="10">
+
+    <padding>
+        <Insets top="25" right="25" bottom="25" left="25"/>
+    </padding>
+
+    <Label text="Formulario de Registro" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+
+    <Label text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="nameField" GridPane.columnIndex="1" GridPane.rowIndex="1" promptText="Ingresa tu nombre"/>
+
+    <Label text="Apellidos:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField fx:id="surnameField" GridPane.columnIndex="1" GridPane.rowIndex="2" promptText="Ingresa tus apellidos"/>
+
+    <Label text="Teléfono (9 dígitos):" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <TextField fx:id="phoneField" GridPane.columnIndex="1" GridPane.rowIndex="3" promptText="Ej: 987654321"/>
+
+    <Label text="Correo Electrónico:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+    <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="4" promptText="Ej: ejemplo@correo.com"/>
+
+    <Label text="Contraseña:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+    <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="5" promptText="Crea una contraseña"/>
+
+    <HBox spacing="10" alignment="bottom_right" GridPane.columnIndex="1" GridPane.rowIndex="6">
+        <Button text="Iniciar Sesión" onAction="#handleLogin"/>
+        <Button text="Registrarse" onAction="#handleRegister"/>
+    </HBox>
+
+    <Label fx:id="actionTarget" GridPane.columnIndex="1" GridPane.rowIndex="7" style="-fx-text-fill: red;"/>
+</GridPane>
