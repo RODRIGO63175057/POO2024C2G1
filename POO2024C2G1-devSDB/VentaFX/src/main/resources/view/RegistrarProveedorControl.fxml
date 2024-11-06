@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="miContenedor" style="-fx-background-color: veige;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.ventafx.control.RegistrarProveedorControl">
+    <children>
+        <VBox layoutX="14.0" layoutY="14.0" prefHeight="379.0" prefWidth="582.0">
+            <children>
+                <AnchorPane prefHeight="129.0" prefWidth="582.0" style="-fx-background-color: #C5C2A6;">
+                    <children>
+                        <Label layoutX="14.0" layoutY="14.0" prefHeight="42.0" prefWidth="152.0" text="Proveedor">
+                            <font>
+                                <Font name="Trebuchet MS" size="31.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="251.0" layoutY="48.0" text="Filtrar:" />
+                        <TextField fx:id="txtFiltroDato" layoutX="251.0" layoutY="66.0" />
+                    </children>
+                </AnchorPane>
+                <HBox prefHeight="253.0" prefWidth="582.0">
+                    <children>
+                        <AnchorPane prefHeight="252.0" prefWidth="280.0" style="-fx-background-color: #2323;">
+                            <children>
+                                <GridPane layoutX="14.0" layoutY="20.0" prefHeight="209.0" prefWidth="268.0" style="-fx-background-color: #6533;">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="101.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.0" minWidth="10.0" prefWidth="167.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="RUC:" />
+                                        <Label text="NOMBRE:" GridPane.rowIndex="1" />
+                                        <Label text="TELEFONO:" GridPane.rowIndex="2" />
+                                        <Label text="DIRECCION" GridPane.rowIndex="3" />
+                                        <Label text="RAZON SOCIAL:" GridPane.rowIndex="4" />
+                                        <Button mnemonicParsing="false" onAction="#validarFormulario" text="Guardar" GridPane.rowIndex="5">
+                                            <GridPane.margin>
+                                                <Insets left="20.0" />
+                                            </GridPane.margin></Button>
+                                        <Button mnemonicParsing="false" onAction="#cancelarAccion" text="Cancelar" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                            <GridPane.margin>
+                                                <Insets left="30.0" />
+                                            </GridPane.margin></Button>
+                                        <TextField fx:id="txtRUC" GridPane.columnIndex="1" />
+                                        <TextField fx:id="txtNombres" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                        <TextField fx:id="txtTelefono" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                        <TextField fx:id="txtDireccion" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                        <TextField fx:id="txtRazonSocial" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                        <Label fx:id="lbnMsg" prefHeight="41.0" prefWidth="266.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="6" />
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="252.0" prefWidth="302.0" style="-fx-background-color: beige;">
+                            <children>
+                                <TableView fx:id="tableView" layoutX="23.0" layoutY="7.0" prefHeight="200.0" prefWidth="200.0" />
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </HBox>
+
+            </children></VBox>
+    </children>
+</AnchorPane>
