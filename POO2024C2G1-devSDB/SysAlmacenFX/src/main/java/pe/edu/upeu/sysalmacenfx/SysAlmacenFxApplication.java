@@ -9,7 +9,6 @@ import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
-//venta_dbs.db
 
 @SpringBootApplication
 public class SysAlmacenFxApplication extends Application {

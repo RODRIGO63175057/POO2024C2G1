@@ -1,8 +1,7 @@
 package pe.edu.upeu.sysalmacenfx.servicio;
 
-import org.slf4j.ILoggerFactory;
-import org.slf4j.LoggerFactory;
-import org.slf4j.Logger;
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pe.edu.upeu.sysalmacenfx.dto.ModeloDataAutocomplet;
@@ -11,12 +10,14 @@ import pe.edu.upeu.sysalmacenfx.repositorio.ProductoRepository;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Service
 public class ProductoService {
     @Autowired
     ProductoRepository repo;
-    Logger logger = LoggerFactory.getLogger(ProductoService.class);
+    Logger logger= LoggerFactory.getLogger(ProductoService.class);
 
     public Producto save(Producto to){
         return repo.save(to);
@@ -46,6 +47,7 @@ public class ProductoService {
     public Producto searchById(Long id){
         return repo.findById(id).get();
     }
+
     public List<ModeloDataAutocomplet> listAutoCompletProducto() {
         List<ModeloDataAutocomplet> listarProducto = new ArrayList<>();
         try {
@@ -61,5 +63,6 @@ public class ProductoService {
         }
         return listarProducto;
     }
+
 
 }
