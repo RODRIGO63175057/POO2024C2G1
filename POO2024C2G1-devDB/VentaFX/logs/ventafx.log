@@ -1,0 +1,23 @@
+2024-11-19T11:51:14.685-05:00  INFO 7576 --- [VentaFX] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 22.0.1 with PID 7576 (started by ASUS VIVOBOOK in C:\POO\DESARROLLO\POO2024C2G1\POO2024C2G1-devSDB\VentaFX)
+2024-11-19T11:51:14.702-05:00  INFO 7576 --- [VentaFX] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2024-11-19T11:51:15.948-05:00  INFO 7576 --- [VentaFX] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-19T11:51:16.115-05:00  INFO 7576 --- [VentaFX] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 151 ms. Found 15 JPA repository interfaces.
+2024-11-19T11:51:16.775-05:00  INFO 7576 --- [VentaFX] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-19T11:51:16.902-05:00  INFO 7576 --- [VentaFX] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-19T11:51:16.969-05:00  INFO 7576 --- [VentaFX] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-19T11:51:17.485-05:00  INFO 7576 --- [VentaFX] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-19T11:51:17.535-05:00  INFO 7576 --- [VentaFX] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-19T11:51:17.666-05:00  INFO 7576 --- [VentaFX] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@a8e0557
+2024-11-19T11:51:17.670-05:00  INFO 7576 --- [VentaFX] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-19T11:51:19.576-05:00  INFO 7576 --- [VentaFX] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-19T11:51:19.638-05:00  INFO 7576 --- [VentaFX] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-19T11:51:20.088-05:00  INFO 7576 --- [VentaFX] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-19T11:51:20.648-05:00  INFO 7576 --- [VentaFX] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 7.04 seconds (process running for 8.718)
+2024-11-19T11:51:21.109-05:00  WARN 7576 --- [VentaFX] [JavaFX Application Thread] javafx.css                               : CSS Error parsing '*{-fx-border-color: #b5abd1; -fx-border-radius: 2; -fx-background-color: #F5F5F5; -fx-background-radius: #2e354f;}: Expected '<size>' while parsing '-fx-background-radius' at [1,105]
+2024-11-19T11:51:21.113-05:00  WARN 7576 --- [VentaFX] [JavaFX Application Thread] javafx.css                               : CSS Error parsing '*{-fx-background-color: #86237;}: Invalid color specification while parsing '-fx-background-color' at [1,24]
+2024-11-19T11:51:21.230-05:00  WARN 7576 --- [VentaFX] [JavaFX Application Thread] javafx.css                               : CSS Error parsing '*{-fx-background-color: #65656;}: Invalid color specification while parsing '-fx-background-color' at [1,24]
+2024-11-19T11:51:21.231-05:00  WARN 7576 --- [VentaFX] [JavaFX Application Thread] javafx.css                               : CSS Error parsing '*{-fx-background-color: "3652;}: Unexpected token '"3652;}' at [1,24]
+2024-11-19T11:51:21.232-05:00  WARN 7576 --- [VentaFX] [JavaFX Application Thread] javafx.css                               : CSS Error parsing '*{-fx-background-color: "3652;}: Expected RBRACE at [-1,-1]
+2024-11-19T11:52:12.530-05:00  INFO 7576 --- [VentaFX] [JavaFX Application Thread] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-19T11:52:12.540-05:00  INFO 7576 --- [VentaFX] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-19T11:52:12.555-05:00  INFO 7576 --- [VentaFX] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

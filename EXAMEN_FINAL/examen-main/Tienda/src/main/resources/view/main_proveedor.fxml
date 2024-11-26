@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="miContenedor" prefHeight="634.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.tienda.control.ProveedorController">
+   <children>
+      <Label layoutX="29.0" layoutY="35.0" text="Proveedor" />
+      <Label layoutX="29.0" layoutY="88.0" text="Ruc:" />
+      <Label layoutX="29.0" layoutY="139.0" text="Nombres:" />
+      <Label layoutX="29.0" layoutY="192.0" text="Telefono:" />
+      <Label layoutX="31.0" layoutY="239.0" text="Direccion:" />
+      <Label layoutX="29.0" layoutY="287.0" text="Razon Social:" />
+      <Label fx:id="lbnMsg" layoutX="37.0" layoutY="336.0" text="sms" />
+      <TextField fx:id="txtRuc" layoutX="107.0" layoutY="84.0" />
+      <TextField fx:id="txtNombre" layoutX="108.0" layoutY="135.0" />
+      <TextField fx:id="txtTelefono" layoutX="109.0" layoutY="188.0" />
+      <TextField fx:id="txtDireccion" layoutX="108.0" layoutY="235.0" />
+      <TextField fx:id="txtRazon" layoutX="108.0" layoutY="283.0" />
+      <Button layoutX="99.0" layoutY="432.0" mnemonicParsing="false" onAction="#validarFormulario" text="Guardar" />
+      <Button layoutX="182.0" layoutY="432.0" mnemonicParsing="false" onAction="#cancelarFormulario" text="Cancelar" />
+      <AnchorPane layoutX="329.0" layoutY="135.0" prefHeight="502.0" prefWidth="556.0">
+         <children>
+            <Button layoutX="83.0" layoutY="435.0" mnemonicParsing="false" onAction="#editarFormulario" text="Editar" />
+            <Button layoutX="176.0" layoutY="435.0" mnemonicParsing="false" onAction="#eliminarFormulaio" text="Eliminar" />
+            <TableView fx:id="tableView" layoutX="14.0" layoutY="14.0" prefHeight="362.0" prefWidth="376.0">
+              <columns>
+                <TableColumn fx:id="colRuc" prefWidth="75.0" text="Ruc" />
+                <TableColumn fx:id="colNombre" prefWidth="75.0" text="Nombre" />
+                  <TableColumn fx:id="colTelefono" prefWidth="75.0" text="Telefono" />
+                  <TableColumn fx:id="colDireccion" prefWidth="75.0" text="Direccion" />
+                  <TableColumn fx:id="colRazon" prefWidth="75.0" text="R.Social" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

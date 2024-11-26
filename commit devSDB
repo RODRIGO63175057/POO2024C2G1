@@ -1,0 +1,22 @@
+[33mfc79ed6[m[33m ([m[1;36mHEAD -> [m[1;32mdevDB[m[33m)[m HEAD@{0}: checkout: moving from fc79ed68fc44ceabd50accf39eb60b3d1c774296 to devDB
+[33mfc79ed6[m[33m ([m[1;36mHEAD -> [m[1;32mdevDB[m[33m)[m HEAD@{1}: rebase (start): checkout HEAD
+[33mfc79ed6[m[33m ([m[1;36mHEAD -> [m[1;32mdevDB[m[33m)[m HEAD@{2}: commit: ventafx
+[33md88827b[m[33m ([m[1;31morigin/devDB[m[33m)[m HEAD@{3}: checkout: moving from devSDB to devDB
+[33meef66c0[m[33m ([m[1;31morigin/devSDB[m[33m, [m[1;31morigin/SRB[m[33m, [m[1;32mdevSDB[m[33m, [m[1;32mSRB[m[33m)[m HEAD@{4}: checkout: moving from SRB to devSDB
+[33meef66c0[m[33m ([m[1;31morigin/devSDB[m[33m, [m[1;31morigin/SRB[m[33m, [m[1;32mdevSDB[m[33m, [m[1;32mSRB[m[33m)[m HEAD@{5}: checkout: moving from devSDB to SRB
+[33meef66c0[m[33m ([m[1;31morigin/devSDB[m[33m, [m[1;31morigin/SRB[m[33m, [m[1;32mdevSDB[m[33m, [m[1;32mSRB[m[33m)[m HEAD@{6}: commit: auto complete
+[33m11759fc[m HEAD@{7}: commit: auto complete
+[33m17ea43e[m HEAD@{8}: commit: sysalmacenfx
+[33ma8a56f6[m HEAD@{9}: commit: AlmacenFx
+[33mef78143[m HEAD@{10}: commit: AlmacenFx
+[33mef6e0f5[m HEAD@{11}: commit: SysAlamacenFXsdb
+[33ma1fa6ba[m HEAD@{12}: checkout: moving from devDB to devSDB
+[33md88827b[m[33m ([m[1;31morigin/devDB[m[33m)[m HEAD@{13}: checkout: moving from devSDB to devDB
+[33ma1fa6ba[m HEAD@{14}: checkout: moving from devDB to devSDB
+[33md88827b[m[33m ([m[1;31morigin/devDB[m[33m)[m HEAD@{15}: commit: holi
+[33m7698831[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{16}: checkout: moving from devSDB to devDB
+[33ma1fa6ba[m HEAD@{17}: commit: ultimo
+[33m7698831[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{18}: checkout: moving from devDB to devSDB
+[33m7698831[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{19}: checkout: moving from main to devDB
+[33m7698831[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{20}: commit: proyec to de calculadora
+[33m6574e5a[m HEAD@{21}: clone: from https://github.com/RODRIGO63175057/POO2024C2G1.git
