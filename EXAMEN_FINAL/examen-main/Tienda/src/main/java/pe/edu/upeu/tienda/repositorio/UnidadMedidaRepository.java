@@ -6,5 +6,6 @@ import pe.edu.upeu.tienda.modelo.UnidadMedida;
 
 @Repository
 public interface UnidadMedidaRepository extends JpaRepository<UnidadMedida, Long> {
+    UnidadMedida findByNombreMedida(String nombreMedida);
 
 }

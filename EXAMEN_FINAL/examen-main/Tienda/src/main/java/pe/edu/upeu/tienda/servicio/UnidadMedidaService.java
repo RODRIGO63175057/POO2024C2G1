@@ -15,7 +15,7 @@ public class UnidadMedidaService {
 
 
     @Autowired
-    UnidadMedidaRepository repo;
+    public UnidadMedidaRepository repo;
     public UnidadMedida save(UnidadMedida to){
         return repo.save(to);
     }

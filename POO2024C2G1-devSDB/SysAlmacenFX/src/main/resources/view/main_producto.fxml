@@ -7,7 +7,7 @@
 
 <AnchorPane fx:id="miContenedor" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.sysalmacenfx.control.ProductoController">
     <children>
-        <VBox layoutX="14.0" layoutY="14.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+        <VBox layoutX="14.0" layoutY="14.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="579.0" prefWidth="849.0">
             <children>
                 <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                     <children>
@@ -122,7 +122,7 @@
                                     <Insets left="5.0" right="5.0" />
                                  </GridPane.margin>
                               </Button>
-                              <Button maxWidth="1.7976931348623157E308" onAction="#cancelarAccion" mnemonicParsing="false" text="Cancelar" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                              <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#cancelarAccion" text="Cancelar" GridPane.columnIndex="2" GridPane.rowIndex="8">
                                  <GridPane.margin>
                                     <Insets left="5.0" right="5.0" />
                                  </GridPane.margin>
@@ -132,9 +132,9 @@
                                 </GridPane>
                             </children>
                         </AnchorPane>
-                        <AnchorPane maxWidth="1.7976931348623157E308">
+                        <AnchorPane maxWidth="1.7976931348623157E308" prefHeight="420.0" prefWidth="385.0">
                      <children>
-                        <TableView fx:id="tableView" layoutX="14.0" layoutY="14.0" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                        <TableView fx:id="tableView" layoutX="34.0" layoutY="10.0" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="258.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="93.20000000000005" AnchorPane.topAnchor="10.0" />
                      </children></AnchorPane>
                     </children>
                 </HBox>

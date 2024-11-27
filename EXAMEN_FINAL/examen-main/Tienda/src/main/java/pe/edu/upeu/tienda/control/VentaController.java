@@ -1,9 +1,11 @@
 package pe.edu.upeu.tienda.control;
 
+import com.itextpdf.text.DocumentException;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import net.sf.jasperreports.engine.JasperPrint;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,11 +13,17 @@ import org.springframework.stereotype.Component;
 import pe.edu.upeu.tienda.componente.*;
 import pe.edu.upeu.tienda.dto.ModeloDataAutocomplet;
 import pe.edu.upeu.tienda.dto.SessionManager;
+import pe.edu.upeu.tienda.dto.Verificador;
 import pe.edu.upeu.tienda.modelo.VentCarrito;
 import pe.edu.upeu.tienda.modelo.Venta;
 import pe.edu.upeu.tienda.modelo.VentaDetalle;
 import pe.edu.upeu.tienda.servicio.*;
+import pe.edu.upeu.tienda.utils.Boleta;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
@@ -198,7 +206,7 @@ public class VentaController {
     }
 
     @FXML
-    public void registrarVenta(){
+    public void registrarVenta() throws DocumentException, IOException {
         Locale locale = new Locale("es", "es-PE");
         LocalDateTime localDate = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss", locale);
@@ -215,6 +223,8 @@ public class VentaController {
                 .numDoc("00" )
                 .build();
         Venta idX = daoV.save(to);
+        System.out.println("idX: "+ idX);
+        System.out.println("idX venta: "+ idX.toString());
         List<VentCarrito> dd = daoC.listaCarritoCliente(dniRuc.getText());
         if (idX.getIdVenta() != 0) {
             for (VentCarrito car : dd) {
@@ -231,7 +241,30 @@ public class VentaController {
         }
         daoC.deleteCarAll(dniRuc.getText());
         listar();
-        try {
+
+        ByteArrayOutputStream pdfStream = Boleta.generatePdfStream( idX,dd);
+
+        // Usar un FileChooser para guardar el PDF
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Guardar archivo PDF");
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Archivo PDF", "*.d"));
+        File selectedFile = fileChooser.showSaveDialog(null);
+
+        if (selectedFile != null) {
+            try (FileOutputStream fos = new FileOutputStream(selectedFile)) {
+                fos.write(pdfStream.toByteArray());
+                System.out.println("PDF guardado en: " + selectedFile.getAbsolutePath());
+            } catch (IOException e) {
+                e.printStackTrace();
+                System.out.println("Error al guardar el archivo PDF.");
+            }
+        } else {
+            System.out.println("El usuario canceló la operación.");
+        }
+
+       // Venta venta = daoV.searchById(idX.getIdVenta());
+       // System.out.println("==========: "+venta.toString());
+        /*try {
             jasperPrint= daoV.runReport(Long.parseLong(String.valueOf(idX.getIdVenta())));
             Platform.runLater(() -> {
                 ReportAlert reportAlert=new ReportAlert(jasperPrint);
@@ -241,6 +274,6 @@ public class VentaController {
             });
         }catch (Exception e){
             System.out.println(e.getMessage());
-        }
+        }*/
     }
 }

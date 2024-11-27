@@ -13,7 +13,7 @@ import java.util.List;
 public class CategoriaService {
 
     @Autowired
-    CategoriaRepository repo;
+    public CategoriaRepository repo;
 
     //C
     public Categoria save(Categoria to){

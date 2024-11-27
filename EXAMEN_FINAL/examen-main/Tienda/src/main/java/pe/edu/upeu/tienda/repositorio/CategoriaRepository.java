@@ -6,4 +6,5 @@ import pe.edu.upeu.tienda.modelo.Categoria;
 
 @Repository
 public interface CategoriaRepository extends JpaRepository<Categoria, Long> {
+    Categoria findByNombre(String nombre);
 }

@@ -14,7 +14,7 @@ import java.util.List;
 public class MarcaService {
 
     @Autowired
-    MarcaRepository repo;
+    public MarcaRepository repo;
     public Marca save(Marca to){
         return repo.save(to);
     }
